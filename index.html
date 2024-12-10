@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Hiltunen</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--Font Awesome icons by Dave Gandy - http://fontawesome.io-->
+</head>
+<body>
+ <!-- Navbar not included in header for sticky nav (sticky-top) to stay on screen in whole page -->
+        <nav class="navbar navbar-expand-lg sticky-top nav-bgc"> <!-- Navigation bar -->
+          <div class="container-fluid">
+            <button class="navbar-toggler button-bgc" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand initials-bgc" href="#home"><img src="images/initials_hb.svg" class="height-30" alt="Name initials"></a>
+            <div id="navbarNav" class="collapse navbar-collapse">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link fs-5 fw-bold nav-text" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5 fw-bold nav-text" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5 fw-bold nav-text" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-5 fw-bold nav-text" href="#contact">Contact me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> <!--Nav bar ends-->
+        <header> 
+          <span id="home" class="anchorhome"></span>
+          <section class='header-bg'> <!--profile picture and introduction-->
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/selfie-bg.png" alt="profile picture" class="profile-picture">
+                </div>
+                <div class="col-md-6 mt-100"> 
+                  <div>
+                    <h1 class="fw-bold"><span class="maincolor">Hi, I'm</span><span class="secondarycolor"> Benjami Hiltunen</span></h1>
+                    <h2 class="maincolor">Software Developer</h2>
+                  </div>
+                  <div class='container-sm col-md-12 container-bgc'>
+                      <p class="fw-bold fs-5 secondarycolor">Studying IT at JAMK University of Applied Sciences. Experience with full stack development and React projects. 
+                      <br> Minoring in Data Analysis and Artificial Intelligence. Beginner programmer with Python and C.</p>
+                  </div>
+                  <div>
+                    <a href="files/cv_hiltunen_english.pdf" download="cv_hiltunen.pdf" target="_blank" class="btn cv fw-bold">Download CV</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+      </header> <!--header ends-->
+      <main>
+        <div class='container-fluid break'> <!--Page break, text animation-->
+          <p class="fw-bold fs-4 text animated-text">React | JavaScript | Python</p>
+        </div>
+        <span id="projects" class="anchor"></span>
+        <section class="container">
+          <div class="col-md-10 mx-auto pt-5">
+            <h2 class="fw-bold maincolor">My recent <span class="secondarycolor">projects</span></h2>
+            <!--Carousel menu-->
+            <div id="project-carousel" class="carousel slide container-bgc" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img src="images/maps.png" class="rounded-5 d-block w-50 mx-auto project-bgc" alt="maps project">
+                    </div>
+                    <div class="col-md-6 text-center text-md-start pt-4">
+                      <h4 class="text-decoration-underline">Golf maps</h4>
+                      <p class="fs-5">Made map app from golf courses in Finland using API from Leaflet.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img src="images/weather.PNG" class="rounded-5 d-block w-50 mx-auto project-bgc" alt="weather app project">
+                    </div>
+                    <div class="col-md-6 text-center text-md-start text-padding">
+                      <h4 class="text-decoration-underline">Weather forecast</h4>
+                      <p class="fs-5">Basic weather forecast app. Forecast API is fetched from OpenWeather.</p>
+                    </div>
+                  </div>
+                </div>
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="images/remix.PNG" class="rounded-5 d-block w-50 mx-auto project-bgc" alt="remix app project">
+                      </div>
+                      <div class="col-md-6 text-center text-md-start text-padding">
+                        <h4 class="text-decoration-underline">Contacts app</h4>
+                        <p class="fs-5">Small feature-rich app to keep track of my contacts, made with remix.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#project-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#project-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <div class="row mt-3 justify-content-center"> <!--GitHub and GitLab links-->
+                  <div class="col-5 col-md-3 mx-auto text-center link-bgc">
+                    <a href="https://gitlab.labranet.jamk.fi/AC9692" target="_blank"><img src="images/gitlab.png" alt="gitlab"></a>
+                  </div>
+                  <div class="col-5 col-md-3 mx-auto text-center link-bgc">
+                    <a href="https://github.com/Benkutus" target="_blank"><img src="images/github.png" alt="github"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section id="experience" class="container mt-5"> <!--Experience starts-->
+          <div class="col-md-8 mx-auto">
+            <img src="images/dino-writer.svg" class="animated-writing" alt="dino writer">
+            <img src="images/dino-writer-invert.svg" class="float-end animated-writing-invert" alt="dino writer inverted">
+          </div>
+          <div class="mt-5 col-md-10 mx-auto">
+            <h2 class="fw-bold maincolor">My <span class="secondarycolor">experience</span></h2>
+          </div>
+          <div class="container col-md-10">
+            <div class="row">
+              <!-- Right side with experience boxes -->
+              <div class="col-md-8 pt-4">
+                <div class="row">
+                  <!-- Experience box 1 -->
+                  <div class="col-md-12 mb-4">
+                    <div class="card card-bgc">
+                      <div class="card-body">
+                        <h5 class="card-title fw-bold secondarycolor">Web Design</h5>
+                        <p class="card-text fw-bold">I've designed few portfolio websites for myself. For this page, I used Figma for drawing the prototypes and BootStrap 5 CSS libraries.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Experience box 2 -->
+                  <div class="col-md-12 mb-4">
+                    <div class="card card-bgc">
+                      <div class="card-body">
+                        <h5 class="card-title fw-bold secondarycolor">Programming</h5>
+                        <p class="card-text fw-bold">I have experience programming with Python and C, but I'm still studying to improve more. I hope to learn C# in near future.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Experience box 3-->
+                  <div class="col-md-12 mb-4">
+                    <div class="card card-bgc">
+                      <div class="card-body">
+                        <h5 class="card-title fw-bold secondarycolor">Data Analysis</h5>
+                        <p class="card-text fw-bold">My minor will probably be data analysis, as I've completed some courses from the module. It's pretty interesting but also difficult in own way.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Left side with images -->
+              <div class="col-md-4 pt-4 order-md-first order-last text-center">
+                <img src="images/globe.png" class="img-fluid mx-auto" alt="globe">
+                <img src="images/espacio_dino-invert.svg" class="img-fluid animated-img" alt="dino">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact"> <!-- Form -->  
+          <div class="wave-end">
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+          <div id="end-section" class="container-fluid end"> 
+            <div class="container row col-10 col-md-4 mx-auto end-container-bgc">
+              <div>
+                <h3 class="fw-bold color">Contact me</h3>
+              </div>
+              <div class="col">
+                <input type="name" class="form-control form-bgc text-center fw-bold" placeholder="Name" aria-label="Name">
+              </div>
+              <div class="col">
+                <input type="email" class="form-control form-bgc text-center fw-bold" placeholder="Email" aria-label="Email">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control form-bgc text-center fw-bold" placeholder="Message" aria-label="Message" rows="3"></textarea>
+              </div>
+              <div class="col text-center">
+                <button type="submit" class="btn btn-bgc fw-bold">Send message</button>
+              </div>
+            </div>
+          </div>
+          <div class="links-bgc"> <!--Find me-->
+              <div class="col text-center">
+                  <h4 class="nav-text">Find me</h4>
+                  <div class="d-flex justify-content-center">
+                      <a href="https://www.linkedin.com/in/benjami-hiltunen-4a1b9824b/" class="mx-2" target="_blank">
+                          <i class="fab fa-linkedin fa-2x nav-text"></i>
+                      </a>
+                      <a href="https://github.com/Benkutus" class="mx-2" target="_blank">
+                          <i class="fab fa-github fa-2x nav-text"></i>
+                      </a>
+                      <a href="https://gitlab.labranet.jamk.fi/AC9692" class="mx-2" target="_blank">
+                          <i class="fab fa-gitlab fa-2x nav-text"></i>
+                      </a>
+                      <a href="https://twitter.com/Benkutus" class="mx-2" target="_blank">
+                          <i class="fab fa-twitter fa-2x nav-text"></i>
+                      </a>
+                  </div>
+              </div>
+        </div>
+        </section>
+      </main>
+      <footer class="footer mt-auto py-3 nav-bgc"> <!--footer-->
+        <div class="container text-center">
+          <span class="text-decoration-underline fw-bold">Developed by Hiltunen Benjami © 2024</span>
+        </div>
+      </footer>
+    <script src="styles/bootstrap.bundle.min.js"></script>
+</body>
+</html>
