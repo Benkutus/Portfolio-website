@@ -178,7 +178,8 @@
 }
 
 .project-bgc {
-  box-shadow: 5px 8px 5px rgba(118, 133, 156, 0.6941176471);
+  box-shadow: 4px 4px 4px rgba(118, 133, 156, 0.6941176471);
+  border: 1px solid #194857;
 }
 
 .link-bgc {
@@ -344,3 +345,7 @@ body {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.carousel-inner {
+  min-height: 150px;
+}
