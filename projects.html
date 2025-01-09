@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio Hiltunen</title>
+    <title>Experience Hiltunen</title>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!--Font Awesome icons by Dave Gandy - http://fontawesome.io-->
@@ -15,14 +15,14 @@
             <button class="navbar-toggler button-bgc" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand initials-bgc" href="#home"><img src="images/initials_hb.svg" class="height-30" alt="Name initials"></a>
+            <a class="navbar-brand initials-bgc" href="index.html"><img src="images/initials_hb.svg" class="height-30" alt="Name initials"></a>
             <div id="navbarNav" class="collapse navbar-collapse">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link fs-5 fw-bold nav-text" aria-current="page" href="#home">Home</a>
+                  <a class="nav-link fs-5 fw-bold nav-text" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fs-5 fw-bold nav-text" href="projects.html">Projects</a>
+                  <a class="nav-link fs-5 fw-bold nav-text" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fs-5 fw-bold nav-text" href="#experience">Experience</a>
@@ -38,22 +38,25 @@
           <span id="home" class="anchorhome"></span>
           <section class='header-bg'> <!--profile picture and introduction-->
             <div class="container">
-              <div class="row">
-                <div class="col-md-6">
-                  <img src="images/selfie-bg.png" alt="profile picture" class="profile-picture">
-                </div>
+              <div class="row align-items-center justify-content-center col-md-12">
+                <!--text part-->
                 <div class="col-md-6 mt-100"> 
                   <div>
-                    <h1 class="fw-bold"><span class="maincolor">Hi, I am</span><span class="secondarycolor"> Benjami Hiltunen</span></h1>
-                    <h2 class="maincolor">Software Developer</h2>
+                    <h1 class="fw-bold"><span class="maincolor">About my</span><span class="secondarycolor"> Projects</span></h1>
                   </div>
                   <div class='container-sm col-md-12 container-bgc'>
-                      <p class="fw-bold fs-5 secondarycolor">Third year IT student at JAMK University of Applied Sciences. Experience with full stack development, Node.js and React projects. Basic programming with Python, C, and object-oriented programming with C#. 
-                      <br> Minoring in Data Analysis and Artificial Intelligence.</p>
+                      <p class="fw-bold fs-5 secondarycolor">
+                        Here are few of my projects, some of which are still in progress. If you're interested, check out my GitHub!
+                        <br>More projects in my University's GitLab, and probably working on something currently.
+                      </p>
                   </div>
                   <div>
-                    <a href="files/cv_hiltunen_english.pdf" download="cv_hiltunen.pdf" target="_blank" class="btn cv fw-bold">Download CV</a>
+                    <a href="https://github.com/Benkutus" target="_blank" class="btn cv fw-bold">My GitHub</a>
                   </div>
+                </div>
+                <!--image part-->
+                <div class="col-md-4">
+                  <a href="https://github.com/Benkutus" target="_blank"><img src="images/github-mark.png" alt="github logo" class="github-picture"></a>
                 </div>
               </div>
             </div>
@@ -151,25 +154,40 @@
               </div>
             </div>
         </section>
-        <section id="experience" class="container mt-5"> <!--Experience starts-->
+        <section id="experience" class="container mt-5"> <!--all projects starts-->
           <div class="col-md-8 mx-auto">
             <img src="images/dino-writer.svg" class="animated-writing" alt="dino writer">
             <img src="images/dino-writer-invert.svg" class="float-end animated-writing-invert" alt="dino writer inverted">
           </div>
           <div class="mt-5 col-md-10 mx-auto">
-            <h2 class="fw-bold maincolor">My <span class="secondarycolor">experience</span></h2>
+            <h2 class="fw-bold maincolor">All <span class="secondarycolor">projects</span></h2>
           </div>
           <div class="container col-md-10">
             <div class="row">
               <!-- Right side with experience boxes -->
-              <div class="col-md-8 pt-4">
+              <div class="col-md-12 pt-4">
                 <div class="row">
                   <!-- Experience box 1 -->
                   <div class="col-md-12 mb-4">
                     <div class="card card-bgc">
                       <div class="card-body">
-                        <h5 class="card-title fw-bold secondarycolor">Web Design</h5>
-                        <p class="card-text fw-bold">I've designed several portfolio websites for myself, utilizing tools like Figma for prototyping and Bootstrap 5 for responsive and accessible designs. My work emphasizes user experience and modern web design principles.</p>
+                        <div class="row align-items-center">
+                          <!-- Image Column -->
+                          <div class="col-md-3 col-12 mb-3 mb-md-0">
+                            <a href="https://github.com/Benkutus/Portfolio-website" target="_blank"><img src="images/portfolio.png" alt="portfolio" class="img-fluid rounded project-bgc project-animate"></a>
+                          </div>
+                          <!-- Text Column -->
+                          <div class="col-md-9 col-12">
+                            <h5 class="card-title fw-bold secondarycolor">Portfolio website</h5>
+                            <p class="card-text fw-bold">
+                              Personal portfolio website, made with HTML and CSS.
+                            </p>
+                            <ul class="fw-bold">
+                              <li>I wanted a simple site, that I could edit and update later on. Made prototype with Figma and started working on this project.</li>
+                              <li>Used BootStrap 5 CSS library for most the parts, but also used SASS for styling that isn't in BootStrap.</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -177,8 +195,24 @@
                   <div class="col-md-12 mb-4">
                     <div class="card card-bgc">
                       <div class="card-body">
-                        <h5 class="card-title fw-bold secondarycolor">Web server programming</h5>
-                        <p class="card-text fw-bold">My primary expertise lies in Node.js and JavaScript projects, which I have extensively used in courses like Web Server Programming and Web User Interface Programming courses. Additionally, I have some experience with frameworks like React and TypeScript.</p>
+                        <div class="row align-items-center">
+                          <!-- Image Column -->
+                          <div class="col-md-3 col-12 mb-3 mb-md-0">
+                            <a href="https://github.com/Benkutus/movie-app" target="_blank"><img src="images/movieapp.PNG" alt="Movie App" class="img-fluid rounded project-bgc project-animate"></a>
+                          </div>
+                          <!-- Text Column -->
+                          <div class="col-md-9 col-12">
+                            <h5 class="card-title fw-bold secondarycolor">Movie app</h5>
+                            <p class="card-text fw-bold">
+                              Simple movie app made with JavaScript/Node.js, shows popular movies and option to save your favorites, fetches API from TMDb.
+                            </p>
+                            <ul class="fw-bold">
+                              <li>Frontend built with HTML, CSS and Javascript, and handles user interactions (searches, favorites, etc.), dynamic UI rendering and communication with backend server via Fetch API. Hosted by Vercel.</li>
+                              <li>Backend built with Node.js, Express.js, and MongoDB, handles data storage, user authentication, and API requests to fetch movie data. Hosted with Render.</li>
+                              <li>Used libraries and frameworks: Express, mongoose, jsonwebtoken, passport, bcrypt, dotenv, cors, axios, and cookie-parser.</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -186,8 +220,24 @@
                   <div class="col-md-12 mb-4">
                     <div class="card card-bgc">
                       <div class="card-body">
-                        <h5 class="card-title fw-bold secondarycolor">Programming</h5>
-                        <p class="card-text fw-bold">I have experience  in object-oriented programming using C#, and small projects in Python and C. I've also completed a course on Data Structures and Algorithms to strengthen my problem-solving skills.</p>
+                        <div class="row align-items-center">
+                          <!-- Image Column -->
+                          <div class="col-md-3 col-12 mb-3 mb-md-0">
+                            <a href="https://github.com/Benkutus/Personal-organizer" target="_blank"><img src="images/organizer.PNG" alt="organizer app" class="img-fluid rounded project-bgc project-animate"></a>
+                          </div>
+                          <!-- Text Column -->
+                          <div class="col-md-9 col-12">
+                            <h5 class="card-title fw-bold secondarycolor">Personal organizer</h5>
+                            <p class="card-text fw-bold">
+                              Personal organizer for fullstack course project. Hosted locally with mongoDB as it's only for my personal use.
+                            </p>
+                            <ul class="fw-bold">
+                              <li>Allows you to save tasks for specific dates, which will then appear in the Tasks list, and will be updated on the dates marked in the calendar.</li>
+                              <li>All tasks can be removed with a click of a button. Also has a feature to save notes to a different list.</li>
+                              <li>Possible to browse different months in the calendar.</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -195,18 +245,56 @@
                   <div class="col-md-12 mb-4">
                     <div class="card card-bgc">
                       <div class="card-body">
-                        <h5 class="card-title fw-bold secondarycolor">Data Analysis</h5>
-                        <p class="card-text fw-bold">With a focus on data-related skills, I've completed courses in Data Analysis and Visualization, as well as Data Preprocessing. These have equipped me with the ability to analyze, visualize, and process different types of datasets.</p>
+                        <div class="row align-items-center">
+                          <!-- Image Column -->
+                          <div class="col-md-3 col-12 mb-3 mb-md-0">
+                            <a href="https://github.com/Benkutus/react-weather-app" target="_blank"><img src="images/weather.PNG" alt="weather app" class="img-fluid rounded project-bgc project-animate"></a>
+                          </div>
+                          <!-- Text Column -->
+                          <div class="col-md-9 col-12">
+                            <h5 class="card-title fw-bold secondarycolor">Weather forecast</h5>
+                            <p class="card-text fw-bold">
+                              Basic weather forecast app to see current weather.
+                            </p>
+                            <ul class="fw-bold">
+                              <li>App made with React. Current weather is fetched from the OpenWeather API.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Experience box 5-->
+                  <div class="col-md-12 mb-4">
+                    <div class="card card-bgc">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <!-- Image Column -->
+                          <div class="col-md-3 col-12 mb-3 mb-md-0">
+                            <a href="https://github.com/Benkutus/C--OOP-tasks/tree/main/StudentRegister" target="_blank"><img src="images/studentregister.PNG" alt="student register" class="img-fluid rounded project-bgc project-animate"></a>
+                          </div>
+                          <!-- Text Column -->
+                          <div class="col-md-9 col-12">
+                            <h5 class="card-title fw-bold secondarycolor">Student register</h5>
+                            <p class="card-text fw-bold">
+                              Simple console-based student register program, made with C#.
+                            </p>
+                            <ul class="fw-bold">
+                              <li>Allows you to add, remove and search student information.</li>
+                              <li>SID is always unique, and it's formed by taking the first letter of the name and last name + running number.</li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Left side with images -->
+              <!-- Left side with images 
               <div class="col-md-4 pt-4 order-md-first order-last text-center">
                 <img src="images/globe.png" class="img-fluid mx-auto" alt="globe">
                 <img src="images/espacio_dino-invert.svg" class="img-fluid animated-img" alt="dino">
-              </div>
+              </div>-->
             </div>
           </div>
         </section>

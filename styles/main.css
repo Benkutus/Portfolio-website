@@ -88,6 +88,32 @@
   animation: moveUpDown 2s ease-in-out infinite;
 }
 
+@keyframes pulsate-img {
+  0% {
+    background-color: #E0FFDD;
+  }
+  40% {
+    background-color: #D3E4FE;
+  }
+  60% {
+    background-color: #D3E4FE;
+  }
+  100% {
+    background-color: #E0FFDD;
+  }
+}
+@keyframes gradient-img {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /*image animation writing */
 @keyframes writeText {
   0%, 100% {
@@ -228,6 +254,25 @@
   position: relative;
   margin-top: 100px;
   animation: pulse 10s infinite;
+  
+}
+
+.github-picture {
+  width: 50%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 100px;
+  border-radius: 15%;
+  box-shadow: 5px 8px 5px rgba(118, 133, 156, 0.6941176471);
+  background-image: linear-gradient(to right, #E0FFDD 0%, #D3E4FE 50%, #E0FFDD 100%);
+  background-size: 300% 100%;
+  animation: pulsate-img 5s linear infinite, gradient-img 10s ease infinite, writeText-invert 6s ease-in-out infinite;
+}
+
+.project-animate {
+  animation: pulse 10s infinite;
 }
 
 .break {
@@ -258,6 +303,7 @@
   border: 1px solid #194857;
 }
 
+
 #end-section {
   background-color: #115A5E;
   padding: 50px 0;
@@ -265,12 +311,21 @@
 }
 
 /*media screens */
+@media (max-width: 576px) {
+  .text {
+    font-size: 1.1rem;
+  }
+}
 @media only screen and (max-width: 400px) {
   .project-img {
     width: 80%;
   }
   .link-bgc img {
     max-width: 100%;
+  }
+  .animated-text {
+    font-size: 1.2rem !important;
+    padding-top: 25px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -294,6 +349,8 @@
     padding: 0 15px;
   }
 }
+
+
 .mt-100 {
   margin-top: 100px;
 }
