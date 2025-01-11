@@ -137,6 +137,15 @@
     transform: rotate(-5deg);
   }
 }
+/* project animation */
+@keyframes tilt {
+  0% {
+    transform: scale(1.05) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(3deg); 
+  }
+}
 .animated-writing-invert {
   animation: writeText-invert 3s ease-in-out infinite;
   height: 60px;
@@ -272,7 +281,13 @@
 }
 
 .project-animate {
-  animation: pulse 10s infinite;
+  transition: transform 1.2s ease-in-out, box-shadow 0.3s ease;
+  transform-origin: center;
+}
+
+.project-animate:hover {
+  transform: scale(1.05) rotate(3deg);
+  animation: tilt 1.2s ease-in-out infinite alternate;
 }
 
 .break {
