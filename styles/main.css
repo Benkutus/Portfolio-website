@@ -71,8 +71,23 @@
     color: #E0FFDD;
   }
 }
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(0%);
+  }
+  55% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 .animated-text {
-  animation: pulsate 5s linear infinite;
+  animation: pulsate 5s linear infinite, moveText 25s linear infinite;
+  white-space: nowrap;
 }
 
 /*image animation */
@@ -295,6 +310,7 @@
   margin-top: 100px;
   width: 100%;
   height: 80px;
+  overflow-x: hidden;
 }
 
 .end {
@@ -327,6 +343,14 @@
 
 /*media screens */
 @media (max-width: 576px) {
+  @keyframes moveText {
+    0% {
+      transform: translateX(-250%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }
   .text {
     font-size: 1.1rem;
   }
@@ -351,6 +375,17 @@
     max-width: 100%;
   }
 }
+@media only screen and (min-width: 576px) and (max-width: 960px) {
+  @keyframes moveText {
+    0% {
+      transform: translateX(-150%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .link-bgc img {
     max-width: 100%;
@@ -425,4 +460,207 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1) hue-rotate(180deg); 
+}
+
+/* ALL CSS FOR SKILL TIMELINE */
+/* General timeline styles */
+.skill-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-left: 3px solid #2babb3; /* Main timeline vertical line */
+  position: relative;
+}
+
+.skill-timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 50px; /* Indent each timeline item */
+}
+
+.skill-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline icon styles */
+.skill-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e0f7f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #2babb3; 
+  border: 3px solid #2babb3;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.skill-icon-info {
+  background: #e0f7f5;
+  color: #194857;
+}
+
+/* Title and description styles */
+.skill-timeline-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #194857;
+  margin: 0 0 5px 15px;
+  width:  100px;
+  text-align: left;
+}
+
+.skill-timeline-description {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #194857;
+  margin: 0 0 0 15px;
+  max-width: 80%;
+  text-align: left;
+}
+
+/* Mobile view adjustments */
+@media only screen and (max-width: 767px) {
+  .skill-timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    margin-top: 20px; 
+  }
+
+  .skill-icon-wrapper {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .skill-timeline-title {
+    margin: 0 0 0 0; 
+    font-size: 18px;
+  }
+
+  .skill-timeline-description {
+    margin: 10px 0 0 0; 
+    font-size: 16px;
+  }
+}
+
+/*CSS FOR WORK TIMELINE*/
+/* General timeline styles */
+.work-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px;
+  border-right: 3px solid #2babb3; /* Main timeline vertical line */
+  position: relative;
+}
+
+.work-timeline-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-right: 50px; /* Indent each timeline item */
+}
+
+.work-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline icon styles */
+.work-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e0f7f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #2babb3; 
+  border: 3px solid #2babb3;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.work-icon-info {
+  background: #e0f7f5;
+  color: #194857;
+}
+
+/* Text container styles */
+.work-timeline-text {
+  margin-right: 60px; /* Match the width of the icon */
+  text-align: left; /* Ensure text is left-aligned */
+  width: calc(100% - 60px); /* Take up the remaining space */
+}
+
+/* Title and description styles */
+.work-timeline-info {
+  margin: 0;
+}
+
+.work-timeline-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #194857;
+  margin-bottom: 5px;
+}
+
+.work-timeline-company {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.work-timeline-description {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #194857;
+  margin-bottom: 10px;
+}
+
+.work-timeline-duration {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Mobile view adjustments */
+@media only screen and (max-width: 767px) {
+  .work-timeline-item {
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+    margin-top: 20px; 
+  }
+
+  .work-icon-wrapper {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .work-timeline-info {
+    margin-right: 0;
+  }
+
+  .work-timeline-title {
+    font-size: 18px;
+  }
+
+  .work-timeline-description {
+    font-size: 16px;
+  }
 }
