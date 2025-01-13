@@ -184,11 +184,11 @@
 }
 
 .button-bgc {
-  background-color: #D3E4FE;
+  background-color: #e0f7f5;
 }
 
 .initials-bgc {
-  background-color: #D3E4FE;
+  background-color: #e0f7f5;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 10px;
@@ -325,7 +325,7 @@
 }
 
 .nav-text {
-  color: #D3E4FE;
+  color: #e0f7f5;
 }
 
 .cv {
@@ -604,8 +604,8 @@ body {
 /* Text container styles */
 .work-timeline-text {
   margin-right: 60px; /* Match the width of the icon */
-  text-align: left; /* Ensure text is left-aligned */
-  width: calc(100% - 60px); /* Take up the remaining space */
+  text-align: left;
+  width: calc(100% - 60px); 
 }
 
 /* Title and description styles */
