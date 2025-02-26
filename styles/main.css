@@ -229,7 +229,7 @@
 
 .project-bgc {
   box-shadow: 4px 4px 4px rgba(118, 133, 156, 0.6941176471);
-  border: 1px solid #194857;
+  border: 1px solid #c2c2c2;
 }
 
 .link-bgc {
@@ -445,6 +445,12 @@ html {
 
 body {
   background-color: #F0FDFC;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
 }
 
 .selector-for-some-widget {
@@ -513,7 +519,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #194857;
-  margin: 0 0 5px 15px;
+  margin: 0 20px 5px 15px;
   width:  100px;
   text-align: left;
 }
